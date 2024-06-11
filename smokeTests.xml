@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Spotify_API_Testing">
+        <classes>
+            <class name="testApiClasses.smokeTests.PlaylistsTesting">
+                <methods>
+                    <include name="getCurrentUserProfile"/>
+                    <include name="createPlaylist"/>
+                    <include name="addItemsToPlaylist"/>
+                    <include name="changePlaylistDetails"/>
+                    <include name="getUserPlaylists"/>
+                    <include name="getPlaylist"/>
+                    <include name="addItemsToPlaylistQueryParams"/>
+                    <include name="getPlaylist2"/>
+                    <include name="removePlaylistItems"/>
+                    <include name="getPlaylist3"/>
+
+                </methods>
+            </class>
+
+            <class name="testApiClasses.smokeTests.NegativeScenarios">
+                <methods>
+                    <include name="sendQueryToWrongEndpoint"/>
+                    <include name="getWrongPlaylist"/>
+                    <include name="addSongsToPrivatePlaylist"/>
+                    <include name="changeSpotifyPlaylistDetails"/>
+                    <include name="addSongsWithWrongID"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
